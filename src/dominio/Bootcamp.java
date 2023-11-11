@@ -1,9 +1,13 @@
 package dominio;
 
+import java.time.LocalDate;
 import java.util.List;
 
 public class Bootcamp {
     private String nome;
+    private LocalDate inicio;
+    private LocalDate fim;
+    private List<Conteudo> conteudos;
     private List<Dev> devs;
 
     public String getNome() {
