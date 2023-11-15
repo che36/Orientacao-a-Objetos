@@ -1,11 +1,14 @@
 package dominio;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Dev {
     private String nome;
-    private List<Conteudo> conteudosInscritos;
-    private List<Conteudo> conteudosConcluidos;
+
+    private List<Conteudo> conteudosInscritos = new ArrayList<>();
+
+    private List<Conteudo> conteudosConcluidos = new ArrayList<>();
 
     public List<Conteudo> getConteudosInscritos() {
         return conteudosInscritos;
@@ -30,5 +33,13 @@ public class Dev {
 
     public void setNome(String nome) {
         this.nome = nome;
+    }
+
+    public void inscrever(Conteudo conteudo) {
+        if (conteudosInscritos.contains(conteudo)) {
+            System.err.println("Você já se inscreveu nesse conteúdo");
+        } else {
+            conteudosInscritos.add(conteudo);
+        }
     }
 }
