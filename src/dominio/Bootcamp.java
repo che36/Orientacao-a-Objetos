@@ -25,4 +25,28 @@ public class Bootcamp {
     public void setDevs(List<Dev> devs) {
         this.devs = devs;
     }
+
+    public LocalDate getInicio() {
+        return inicio;
+    }
+
+    public void setInicio(LocalDate inicio) {
+        this.inicio = inicio;
+    }
+
+    public LocalDate getFim() {
+        return fim;
+    }
+
+    public void setFim(LocalDate fim) {
+        this.fim = fim;
+    }
+
+    public List<Conteudo> getConteudos() {
+        return conteudos;
+    }
+
+    public void setConteudos(List<Conteudo> conteudos) {
+        this.conteudos = conteudos;
+    }
 }
