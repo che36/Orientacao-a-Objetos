@@ -2,6 +2,7 @@ package dominio;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 public class Dev {
     private String nome;
@@ -45,8 +46,16 @@ public class Dev {
 
     public void inscrever(Bootcamp bootcamp) {
         bootcamp.getConteudos().stream().forEach(this::inscrever);
+        bootcamp.getDevs().add(this);
     }
 
+    public void progredir() {
+        Optional<Conteudo> conteudo = conteudosInscritos.stream().findFirst();
+        if (conteudo.isPresent()) {
+            conteudosConcluidos.add(conteudo.get());
+            conteudosInscritos.remove(conteudo.get());
+        }
+    }
 }
 
 
