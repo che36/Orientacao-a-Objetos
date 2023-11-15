@@ -39,5 +39,10 @@ public class Main {
         Dev felipao = new Dev();
         felipao.setNome("Felipao");
         felipao.inscrever(cursoDotNet);
+
+        Dev Cesar = new Dev();
+        Cesar.setNome("Cesar");
+        Cesar.inscrever(bootcamp);
+        Cesar.progredir();
     }
 }
