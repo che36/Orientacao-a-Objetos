@@ -1,7 +1,4 @@
-import dominio.Bootcamp;
-import dominio.Conteudo;
-import dominio.Curso;
-import dominio.Mentoria;
+import dominio.*;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -39,5 +36,8 @@ public class Main {
         List<Conteudo> conteudosBootcamp = Arrays.asList(cursoJavaBasico, cursoJavaBasico, mentoria);
         bootcamp.setConteudos(conteudosBootcamp);
 
+        Dev felipao = new Dev();
+        felipao.setNome("Felipao");
+        felipao.inscrever(cursoDotNet);
     }
 }
