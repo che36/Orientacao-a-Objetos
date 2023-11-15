@@ -54,6 +54,8 @@ public class Dev {
         if (conteudo.isPresent()) {
             conteudosConcluidos.add(conteudo.get());
             conteudosInscritos.remove(conteudo.get());
+        } else {
+            System.err.println("Você nao está mais inscrito em nenhum inscrito.");
         }
     }
 }
