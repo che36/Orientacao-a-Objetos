@@ -42,4 +42,11 @@ public class Dev {
             conteudosInscritos.add(conteudo);
         }
     }
+
+    public void inscrever(Bootcamp bootcamp) {
+        bootcamp.getConteudos().stream().forEach(this::inscrever);
+    }
+
 }
+
+
