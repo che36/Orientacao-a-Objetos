@@ -4,6 +4,7 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 // Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
 // then press Enter. You can now see whitespace characters in your code.
@@ -47,5 +48,9 @@ public class Main {
 
         System.out.println(String.format("XP Felipao: %.2f", felipao.calcularTotalXp()));
         System.out.println(String.format("XP Felipao: %.2f", felipao.calcularTotalXp()));
+
+        List<Dev> ranking = Arrays.asList(felipao, Cesar).stream()
+                .sorted((dev1, dev2) -> Double.compare(dev2.calcularTotalXp(), dev1.calcularTotalXp()))
+                .collect(Collectors.toList());
     }
 }
