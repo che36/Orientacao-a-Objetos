@@ -14,4 +14,9 @@ public class Curso extends Conteudo {
     public void setCargaHoraria(int cargaHoraria) {
         this.cargaHoraria = cargaHoraria;
     }
+
+    @Override
+    public double calcularXP() {
+        return 0;
+    }
 }
