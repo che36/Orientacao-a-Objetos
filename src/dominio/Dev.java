@@ -58,6 +58,12 @@ public class Dev {
             System.err.println("Você nao está mais inscrito em nenhum inscrito.");
         }
     }
+
+    public double calcularTotalXp() {
+        return conteudosConcluidos.stream().mapToDouble(conteudo -> conteudo.calcularXP())
+                .sum();
+
+    }
 }
 
 
