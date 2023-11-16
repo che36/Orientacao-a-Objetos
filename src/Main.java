@@ -52,5 +52,9 @@ public class Main {
         List<Dev> ranking = Arrays.asList(felipao, Cesar).stream()
                 .sorted((dev1, dev2) -> Double.compare(dev2.calcularTotalXp(), dev1.calcularTotalXp()))
                 .collect(Collectors.toList());
+
+        for (Dev dev : ranking) {
+            System.out.println(dev.getNome());
+        }
     }
 }
