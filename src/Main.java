@@ -44,5 +44,8 @@ public class Main {
         Cesar.setNome("Cesar");
         Cesar.inscrever(bootcamp);
         Cesar.progredir();
+
+        System.out.println(String.format("XP Felipao: %.2f", felipao.calcularTotalXp()));
+        System.out.println(String.format("XP Felipao: %.2f", felipao.calcularTotalXp()));
     }
 }
